@@ -8,7 +8,7 @@ data <- read.csv.sql("household_power_consumption.txt",
 dataDate<- strptime( paste (data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 
 ## Changing the device to png and creating plot3 as a png file in the working directory
-png(file = "./plot3.png", width = 480, height = 480, units = "px")
+png(file = "./plot3.png", width = 480, height = 480, units = "px",bg="transparent")
 plot(dataDate, data[,7],"n", xlab="", ylab="Energy sub metering")
 lines(dataDate, data$Sub_metering_1)
 lines(dataDate, data$Sub_metering_2,col="red")  

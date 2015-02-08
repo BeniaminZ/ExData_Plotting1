@@ -8,7 +8,7 @@ data <- read.csv.sql("household_power_consumption.txt",
 dataDate<- strptime( paste (data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 
 ## Changing the device to png and creating plot4 as a png file in the working directory
-png(file = "./plot4.png", width = 480, height = 480, units = "px")
+png(file = "./plot4.png", width = 480, height = 480, units = "px",bg="transparent")
 par(mfrow=c(2,2))
 plot(dataDate, data$Global_active_power, xlab="", ylab="Global Active Power", type="l")
 plot(dataDate, data$Voltage, xlab="datetime", ylab="Voltage",type="l")
